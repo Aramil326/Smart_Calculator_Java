@@ -1,0 +1,20 @@
+#button {
+    -fx-font-size: 20px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 50px;
+}
+
+#label {
+    -fx-text-fill: #44476A;
+    -fx-font-size: 20px;
+    -fx-column-halignment: right;
+    -fx-alignment: center;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 70px;
+}
+
+#input {
+    -fx-font-size: 15px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 70px;
+}

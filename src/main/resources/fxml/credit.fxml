@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * Copyright (c) 2011, 2014 Oracle and/or its affiliates.
+ * All rights reserved. Use is subject to license terms.
+ *
+ * This file is available and licensed under the following license:
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ *  - Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *  - Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in
+ *    the documentation and/or other materials provided with the distribution.
+ *  - Neither the name of Oracle Corporation nor the names of its
+ *    contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="creditPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="730.0" prefWidth="1300.0"
+            style="-fx-background-color: #E6E7EE;" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="s21.azathotp.controllers.CreditController">
+    <GridPane alignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+              AnchorPane.topAnchor="5.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints percentHeight="8.0" vgrow="SOMETIMES"/>
+            <RowConstraints vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Button id="button" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onCalculatorClicked" prefHeight="50.0"
+                    prefWidth="233.0" text="Calculator" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <stylesheets>
+                    <URL value="@../css/common.css"/>
+                    <URL value="@../css/style.css"/>
+                </stylesheets>
+            </Button>
+            <Button id="button" alignment="CENTER" disable="true" maxHeight="-Infinity" maxWidth="-Infinity"
+                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0"
+                    prefWidth="233.0" text="Credit calculator" GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                    GridPane.valignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <stylesheets>
+                    <URL value="@../css/common.css"/>
+                    <URL value="@../css/style.css"/>
+                </stylesheets>
+            </Button>
+            <Button id="button" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onGraphClicked" prefHeight="50.0"
+                    prefWidth="233.0" text="Graph" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                    GridPane.valignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <stylesheets>
+                    <URL value="@../css/common.css"/>
+                    <URL value="@../css/style.css"/>
+                </stylesheets>
+            </Button>
+            <Button id="button" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSettingsClicked" prefHeight="50.0"
+                    prefWidth="233.0" text="Settings" GridPane.columnIndex="3" GridPane.halignment="CENTER"
+                    GridPane.valignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <stylesheets>
+                    <URL value="@../css/common.css"/>
+                    <URL value="@../css/style.css"/>
+                </stylesheets>
+            </Button>
+            <Button id="button" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onInfoClicked" prefHeight="50.0"
+                    prefWidth="233.0" text="Info" GridPane.columnIndex="4" GridPane.halignment="CENTER"
+                    GridPane.valignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <stylesheets>
+                    <URL value="@../css/common.css"/>
+                    <URL value="@../css/style.css"/>
+                </stylesheets>
+            </Button>
+        </GridPane>
+        <GridPane GridPane.rowIndex="1">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints maxHeight="500.0" minHeight="421.0" prefHeight="426.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="236.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="-Infinity" minHeight="160.0" prefHeight="200.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <Label id="label" text="amount of credit" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                        <GridPane.margin>
+                            <Insets right="10.0"/>
+                        </GridPane.margin>
+                        <stylesheets>
+                            <URL value="@../css/common.css"/>
+                            <URL value="@../css/style.css"/>
+                            <URL value="@../css/credit.css"/>
+                        </stylesheets>
+                    </Label>
+                    <Label id="label" text="credit term" GridPane.halignment="RIGHT" GridPane.rowIndex="1"
+                           GridPane.valignment="TOP">
+                        <GridPane.margin>
+                            <Insets right="10.0"/>
+                        </GridPane.margin>
+                        <stylesheets>
+                            <URL value="@../css/common.css"/>
+                            <URL value="@../css/style.css"/>
+                            <URL value="@../css/credit.css"/>
+                        </stylesheets>
+                    </Label>
+                    <Label id="label" text="interest rate" GridPane.halignment="RIGHT" GridPane.rowIndex="2"
+                           GridPane.valignment="TOP">
+                        <GridPane.margin>
+                            <Insets right="10.0"/>
+                        </GridPane.margin>
+                        <stylesheets>
+                            <URL value="@../css/common.css"/>
+                            <URL value="@../css/style.css"/>
+                            <URL value="@../css/credit.css"/>
+                        </stylesheets>
+                    </Label>
+                    <Label id="label" prefHeight="155.0" text="type" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                        <GridPane.margin>
+                            <Insets right="10.0"/>
+                        </GridPane.margin>
+                        <stylesheets>
+                            <URL value="@../css/common.css"/>
+                            <URL value="@../css/style.css"/>
+                            <URL value="@../css/credit.css"/>
+                        </stylesheets>
+                    </Label>
+                    <TextField id="input" fx:id="creditAmountInput" text="300000" GridPane.columnIndex="1"
+                               GridPane.valignment="TOP">
+                        <stylesheets>
+                            <URL value="@../css/common.css"/>
+                            <URL value="@../css/style.css"/>
+                            <URL value="@../css/credit.css"/>
+                        </stylesheets>
+                    </TextField>
+                    <TextField id="input" fx:id="creditTermInput" text="6" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1" GridPane.valignment="TOP">
+                        <stylesheets>
+                            <URL value="@../css/common.css"/>
+                            <URL value="@../css/style.css"/>
+                            <URL value="@../css/credit.css"/>
+                        </stylesheets>
+                    </TextField>
+                    <TextField id="input" fx:id="interestRateInput" text="20" GridPane.columnIndex="1"
+                               GridPane.rowIndex="2" GridPane.valignment="TOP">
+                        <stylesheets>
+                            <URL value="@../css/common.css"/>
+                            <URL value="@../css/style.css"/>
+                            <URL value="@../css/credit.css"/>
+                        </stylesheets>
+                    </TextField>
+                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <RadioButton fx:id="annuity" mnemonicParsing="false" stylesheets="@../css/credit.css"
+                                     text="annuity">
+                            <font>
+                                <Font size="25.0"/>
+                            </font>
+                        </RadioButton>
+                        <RadioButton fx:id="differentiated" mnemonicParsing="false" stylesheets="@../css/credit.css"
+                                     text="differentiated" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="25.0"/>
+                            </font>
+                        </RadioButton>
+                    </GridPane>
+                </GridPane>
+                <Button id="button" mnemonicParsing="false" onMouseClicked="#onEvaluateClicked" text="Calculate"
+                        GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                        <URL value="@../css/credit.css"/>
+                    </stylesheets>
+                </Button>
+                <padding>
+                    <Insets top="20.0"/>
+                </padding>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints maxHeight="200.0" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <Label id="label" text="monthly payment" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets right="10.0"/>
+                    </GridPane.margin>
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                        <URL value="@../css/credit.css"/>
+                    </stylesheets>
+                </Label>
+                <Label id="label" text="overpayment on a loan" GridPane.halignment="RIGHT" GridPane.rowIndex="1"
+                       GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets right="10.0"/>
+                    </GridPane.margin>
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                        <URL value="@../css/credit.css"/>
+                    </stylesheets>
+                </Label>
+                <Label id="label" text="total payment" GridPane.halignment="RIGHT" GridPane.rowIndex="2"
+                       GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets right="10.0"/>
+                    </GridPane.margin>
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                        <URL value="@../css/credit.css"/>
+                    </stylesheets>
+                </Label>
+                <Label id="label" fx:id="overpayment" GridPane.columnIndex="1" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                        <URL value="@../css/credit.css"/>
+                    </stylesheets>
+                </Label>
+                <Label id="label" fx:id="totalPayment" GridPane.columnIndex="1" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                        <URL value="@../css/credit.css"/>
+                    </stylesheets>
+                </Label>
+                <TableView fx:id="monthlyPayments" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                    <columns>
+                        <TableColumn fx:id="tableColumn" prefWidth="319.0" resizable="false" text="Платежи"/>
+                    </columns>
+                </TableView>
+                <padding>
+                    <Insets top="20.0"/>
+                </padding>
+            </GridPane>
+        </GridPane>
+    </GridPane>
+</AnchorPane>

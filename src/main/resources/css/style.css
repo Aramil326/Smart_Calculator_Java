@@ -1,0 +1,17 @@
+#button {
+    -fx-border-radius: 20px;
+    -fx-border-color: #44476A;
+    -fx-background-color: #E6E7EE;
+}
+
+#input {
+    -fx-border-radius: 20px;
+    -fx-border-color: #44476A;
+    -fx-background-color: #E6E7EE;
+}
+
+#label {
+    -fx-border-radius: 20px;
+    -fx-border-color: #44476A;
+    -fx-background-color: #E6E7EE;
+}

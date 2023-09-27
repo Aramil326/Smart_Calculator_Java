@@ -1,0 +1,43 @@
+#button {
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+}
+
+#tm {
+    -fx-border-radius: 20px;
+    -fx-border-color: #44476A;
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-background-color: #E6E7EE;
+    -fx-text-fill: #44476A;
+}
+
+#button:hover {
+    -fx-border-color: #2D4CC8;
+}
+
+#button:pressed {
+    -fx-border-color: #2D4CC8;
+    -fx-text-fill: #2D4CC8;
+}
+
+#input {
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-font-size: 15px;
+}
+
+#input:hover {
+    -fx-border-color: #2D4CC8;
+}
+
+#input:focused {
+    -fx-border-color: #2D4CC8;
+}
+
+#label {
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-text-fill: #44476A;
+    -fx-font-size: 25px;
+}

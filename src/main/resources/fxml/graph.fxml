@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="graphPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="730.0" prefWidth="1300.0"
+            style="-fx-background-color: #E6E7EE;" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="s21.azathotp.controllers.GraphController">
+    <GridPane alignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+              AnchorPane.topAnchor="5.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints percentHeight="8.0" vgrow="SOMETIMES"/>
+            <RowConstraints vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="-Infinity" minHeight="150.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Button id="button" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onCalculatorClicked" prefHeight="50.0"
+                    prefWidth="233.0" text="Calculator" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <stylesheets>
+                    <URL value="@../css/common.css"/>
+                    <URL value="@../css/style.css"/>
+                </stylesheets>
+            </Button>
+            <Button id="button" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onCreditClicked" prefHeight="50.0"
+                    prefWidth="233.0" text="Credit calculator" GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                    GridPane.valignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <stylesheets>
+                    <URL value="@../css/common.css"/>
+                    <URL value="@../css/style.css"/>
+                </stylesheets>
+            </Button>
+            <Button id="button" alignment="CENTER" disable="true" maxHeight="-Infinity" maxWidth="-Infinity"
+                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0"
+                    prefWidth="233.0" text="Graph" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                    GridPane.valignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <stylesheets>
+                    <URL value="@../css/common.css"/>
+                    <URL value="@../css/style.css"/>
+                </stylesheets>
+            </Button>
+            <Button id="button" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSettingsClicked" prefHeight="50.0"
+                    prefWidth="233.0" text="Settings" GridPane.columnIndex="3" GridPane.halignment="CENTER"
+                    GridPane.valignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <stylesheets>
+                    <URL value="@../css/common.css"/>
+                    <URL value="@../css/style.css"/>
+                </stylesheets>
+            </Button>
+            <Button id="button" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onInfoClicked" prefHeight="50.0"
+                    prefWidth="233.0" text="Info" GridPane.columnIndex="4" GridPane.halignment="CENTER"
+                    GridPane.valignment="CENTER">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <stylesheets>
+                    <URL value="@../css/common.css"/>
+                    <URL value="@../css/style.css"/>
+                </stylesheets>
+            </Button>
+        </GridPane>
+        <ScatterChart fx:id="graph" animated="false" legendVisible="false" prefHeight="516.0" prefWidth="960.0"
+                      GridPane.rowIndex="1">
+            <xAxis>
+                <NumberAxis side="BOTTOM" fx:id="xAxis"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT"/>
+            </yAxis>
+        </ScatterChart>
+        <GridPane GridPane.rowIndex="2">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="60.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <GridPane GridPane.columnIndex="1">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <TextField id="input" fx:id="graphExpression" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="510.0"
+                           GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="30.0"/>
+                    </font>
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                    </stylesheets>
+                </TextField>
+                <Button id="button" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity"
+                        maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                        onMouseClicked="#onPrintGraphClicked" prefHeight="70.0" prefWidth="510.0" text="Calculate"
+                        GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="30.0"/>
+                    </font>
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                    </stylesheets>
+                </Button>
+            </GridPane>
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <Label id="label" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                       minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="187.0" text="X min = "
+                       GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                    </stylesheets>
+                </Label>
+                <Label id="label" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                       minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="187.0" text="X max = "
+                       GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                    </stylesheets>
+                </Label>
+                <Label id="label" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                       minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="187.0" text="Y min = "
+                       GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                    </stylesheets>
+                </Label>
+                <Label id="label" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                       minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="187.0" text="Y max = "
+                       GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1"
+                       GridPane.valignment="CENTER">
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                    </stylesheets>
+                </Label>
+                <TextField id="input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="70.0" prefWidth="187.0" text="-10" GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER" GridPane.valignment="CENTER" fx:id="xMinInput">
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                    </stylesheets>
+                </TextField>
+                <TextField id="input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="70.0" prefWidth="187.0" text="10" GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER"
+                           fx:id="xMaxInput">
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                    </stylesheets>
+                </TextField>
+                <TextField id="input" fx:id="yMinInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="70.0" prefWidth="187.0" text="-10" GridPane.columnIndex="3"
+                           GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                    </stylesheets>
+                </TextField>
+                <TextField id="input" fx:id="yMaxInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="70.0" prefWidth="187.0" text="10" GridPane.columnIndex="3"
+                           GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <stylesheets>
+                        <URL value="@../css/common.css"/>
+                        <URL value="@../css/style.css"/>
+                    </stylesheets>
+                </TextField>
+            </GridPane>
+        </GridPane>
+    </GridPane>
+</AnchorPane>
